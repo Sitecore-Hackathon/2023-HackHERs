@@ -3,15 +3,16 @@ import Link from 'next/link';
 import { identifyVisitor } from '../../services/CdpService';
 import { getUserData } from '../../helpers/GuestDataHelper';
 import { ComponentProps } from 'lib/component-props';
+import { saveImageUrl } from '../../services/CdpService';
 
 const RequestInfoForm = (props: ComponentProps): JSX.Element => {
+  const sxaStyles = `${props.params?.styles || ''}`;
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
-
-  const sxaStyles = `${props.params?.styles || ''}`;
+  const [imageUrl, setImageUrl] = useState('');
 
   useEffect(() => {
     const setUserData = async () => {
@@ -35,6 +36,7 @@ const RequestInfoForm = (props: ComponentProps): JSX.Element => {
 
     return await identifyVisitor(email, firstName, lastName, phoneNumber).then(() => {
       setIsFormSubmitted(true);
+      saveImageUrl(imageUrl);
     });
   };
 
@@ -103,6 +105,22 @@ const RequestInfoForm = (props: ComponentProps): JSX.Element => {
             onChange={(e) => setPhoneNumber(e.target.value)}
           />
           <label htmlFor="phoneNumber">Phone Number</label>
+        </div>
+      </div>
+      <div className="inline-fields">
+        <div className="floating-label-wrap">
+          <input
+            type="text"
+            placeholder="Image Url"
+            id="imageUrl"
+            autoComplete="image"
+            onChange={(e) => setImageUrl(e.target.value)}
+          />
+          <label htmlFor="imageUrl">Image Url</label>
+        </div>
+        <div className="floating-label-wrap">
+          <input type="text" placeholder="Company" id="company" autoComplete="organization" />
+          <label htmlFor="company">Company</label>
         </div>
       </div>
       <label className="checkbox-label">

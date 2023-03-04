@@ -1,49 +1,55 @@
-# PLAY! Summit Demo on XM Cloud
+# Hackathon Submission Entry form
 
-This repository is used for the primary Sitecore DXP demo that uses:
+## Team name
+2023-HackHERS
+
+## Category
+Best Enhancement to Sitecore XMCloud
+
+## Description
+Sitecore XM Cloud already offers strong personalization features, but there are always ways to improve. In this module, we have integrated Sitecore Demo Team's XMCLoud based site PlaySummit with CDP & Azure cognitive Image analysis to provide enhanced personalization to our customers. With the power of AI's Image analysis, we personalize the suggestions based on the Visitior's favourite image.
+
+The CDP Sandbox has all the features to bring this experience to the Play Summit User.
+
+![CDP Flow Chart](docs/images/canvas.png?raw=true "canvas")
+
+## Video link
+⟹ Provide a video highlighing your Hackathon module submission and provide a link to the video. You can use any video hosting, file share or even upload the video to this repository. _Just remember to update the link below_
+
+⟹ [Replace this Video link](#video-link)
+
+## Pre-requisites and Dependencies
+
+⟹ Does your module rely on other Sitecore modules or frameworks?
 
 - Sitecore XM Cloud
   - XM Cloud Pages Personalize
   - XM Cloud Pages Analyze
-- Sitecore Content Hub DAM and CMP
 - Sitecore JavaScript Services (JSS)
 - Next.js
 - Vercel
 - Tailwind CSS
 - Storybook
 
-## ⚠ Important notice
+The Demo is local container based. Once built, it integrates with the following composable stack technologies
+- CDP
+- Personalize
 
-### Is PLAY! Summit a starter kit or template solution?
+## Installation instructions
 
-**No.** You should not clone this repository for the purposes of starting a new Sitecore project. There are other community solutions which can be used as a starter for Sitecore implementations. PLAY! Summit is intended as a **demo site demonstrating the full Sitecore DXP capabilities**.
+Follow the instructions in this document [Docker](docs/docker.md) to bring up the site.
 
-### Is PLAY! Summit supported by Sitecore?
+## Usage instructions
 
-Sitecore maintains the PLAY! Summit example, but PLAY! Summit code is not supported by Sitecore Product Support Services. Please do not submit support tickets regarding PLAY! Summit.
+1. Browse to the Url https://www.xmcloudcm.localhost/about-us
 
-### How can I get help with PLAY! Summit?
+2. Fill out the form with your favourite image url. (https://th.bing.com/th/id/R.d8c55c2fa5917bd6c52e252ccdecd2f8?rik=kIqbViHvFCzQSQ&pid=ImgRaw&r=0)
+   ![Form](docs/images/form.png?raw=true "Request Form with Image Url")
 
-For usage questions regarding PLAY! Summit, installation or code, please use [Sitecore Stack Exchange](https://sitecore.stackexchange.com/) or [#sitecoredemo](https://sitecorechat.slack.com/messages/CASEB5M38) on [Sitecore Community Slack](https://sitecore.chat/).
+3. Submit it
 
-Please do not submit usage questions via GitHub.
+4. On refresh, you will see a popup analyzing your favourite image.
+   ![outdoor](docs/images/demo-outdoor.png?raw=true "demo outdoor")
 
-### Bug reports
-
-You can use GitHub to submit [bug reports](https://github.com/Sitecore/Sitecore.Demo.XmCloud.PlaySummit/issues/new) for PLAY! Summit.
-
-### Feature requests
-
-You can use GitHub to submit [feature requests](https://github.com/Sitecore/Sitecore.Demo.XmCloud.PlaySummit/issues/new) for PLAY! Summit.
-
-### Contribute
-
-Contributions are always welcome by submitting [pull requests](https://github.com/Sitecore/Sitecore.Demo.XmCloud.PlaySummit/pulls) on GitHub!
-
-### License
-
-Please read the [LICENSE](https://github.com/Sitecore/Sitecore.Demo.XmCloud.PlaySummit/blob/main/LICENSE) carefully prior to using the code in this repository.
-
-### Warranty
-
-The code, samples and/or solutions provided in this repository are for example purposes only and **without warranty (expressed or implied)**. The code has not been extensively tested and is not guaranteed to be bug free.
+5. Retry with another Url. (https://th.bing.com/th/id/OIP.MpTK7yhGKxwZhHnl3ArthwHaHa?pid=ImgDet&rs=1)
+   ![tech](docs/images/demo-tech.png?raw=true "demo tech")

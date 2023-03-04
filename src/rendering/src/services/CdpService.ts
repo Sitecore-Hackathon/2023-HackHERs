@@ -67,6 +67,26 @@ export function identifyVisitor(
 }
 
 /**
+ * Save favorite image as data extension
+ */
+export function saveImageUrl(imageUrl?: string): Promise<unknown> {
+  const dataExtensionName = 'favImage';
+
+  const eventPayload = {
+    imageUrl: imageUrl,
+  };
+
+  const dataExtensionPayload = {
+    key: dataExtensionName,
+    imageUrl: imageUrl,
+  };
+
+  return logEvent('FAV_IMAGE', eventPayload).then(() =>
+    saveDataExtension(dataExtensionName, dataExtensionPayload)
+  );
+}
+
+/**
  * Logs the purchase of a ticket as an event, and stores the owned ticket in the visitor CDP profile.
  */
 export function logTicketPurchase(ticketId: number): Promise<unknown> {

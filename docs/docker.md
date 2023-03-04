@@ -9,12 +9,6 @@ The environment has some extra containers:
 - **Rendering Host**: A Next.js rendering host container to render the main website. It runs the website in development mode with hot reloading.
 - **Init Container**: It runs some startup jobs (mostly when deployed to AKS and Vercel) and warms up the main website.
 
-## Prerequisites
-
-Do these prerequisites before you start the main website or the kiosk projects.
-
-Ensure you have installed and followed the [global prerequisites](prerequisites.md).
-
 ### Preparing Docker
 
 1. Ensure you are running Windows containers:
@@ -99,7 +93,7 @@ The Linux MSSQL container is super slow to terminate when using the `docker-comp
 
 A script can be used to "reset" the state of your containers. It clears all mounted data and deployed/copied build output. In an elevated PowerShell terminal:
 
-1. Ensure you have [stopped the containers](#Stopping-the-Containers).
+1. Ensure you have [stopped the containers](#stopping-the-containers).
 2. Run the script:
 
     ```ps1
