@@ -10,13 +10,11 @@ Best Enhancement to Sitecore XMCloud
 Sitecore XM Cloud already offers strong personalization features, but there are always ways to improve. In this module, we have integrated Sitecore Demo Team's XMCLoud based site PlaySummit with CDP & Azure cognitive Image analysis to provide enhanced personalization to our customers. With the power of AI's Image analysis, we personalize the suggestions based on the Visitior's favourite image.
 
 The CDP Sandbox has all the features to bring this experience to the Play Summit User.
-
-![CDP Flow Chart](docs/images/canvas.png?raw=true "canvas")
+![CDP Flow Chart](docs/images/Canvas.png?raw=true "canvas")
 
 ## Video link
-⟹ Provide a video highlighing your Hackathon module submission and provide a link to the video. You can use any video hosting, file share or even upload the video to this repository. _Just remember to update the link below_
 
-⟹ [Replace this Video link](#video-link)
+https://youtu.be/SLEs6SqWW3o
 
 ## Pre-requisites and Dependencies
 
