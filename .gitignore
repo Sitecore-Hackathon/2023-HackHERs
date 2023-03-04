@@ -11,14 +11,6 @@
 *.itempackage
 *.sicpackage
 
-
-# User-specific files
-*.rsuser
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-
 #Ignore thumbnails created by Windows
 Thumbs.db
 #Ignore files built by Visual Studio
@@ -40,6 +32,7 @@ Thumbs.db
 *.ilk
 *.log
 [Bb]in
+!docker/build/**/[Bb]in
 [Dd]ebug*/
 *.lib
 *.sbr
@@ -50,3 +43,39 @@ _ReSharper*/
 .vs/
 #Nuget packages folder
 packages/
+
+# temporary workaround
+/docker/data/cm/*
+!/docker/data/cm/.gitkeep
+/docker/data/cd/*
+!/docker/data/cd/.gitkeep
+/docker/data/sql/*
+!/docker/data/sql/.gitkeep
+/docker/data/solr/*
+!/docker/data/solr/.gitkeep
+/docker/deploy/platform/*
+!/docker/deploy/platform/.gitkeep
+/docker/traefik/certs/*.pem
+/src/rendering/node_modules
+/src/rendering/coverage
+/src/rendering/.next*/
+/src/rendering/out/
+/src/rendering/.generated
+/src/rendering/*.graphql.d.ts
+/src/rendering/*.graphqls.d.ts
+/src/rendering/.DS_Store
+/src/rendering/.env.local
+/src/rendering/.env.*.local
+/src/rendering/*.log*
+/src/rendering/.vercel
+/src/rendering/**/*.graphql.d.ts
+/src/rendering/**/*.graphqls.d.ts
+/src/rendering/**/.DS_Store
+/src/rendering/**/.env.local
+/src/rendering/**/.env.*.local
+/src/rendering/**/*.log*
+/src/rendering/.vercel
+/src/rendering/src/temp/*
+/src/rendering/src/temp/!.gitignore
+/src/rendering/src/temp/!GraphQLFragmentTypes.json
+/src/rendering/src/temp/!GraphQLIntrospectionResult.json
